@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/cartype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Car Type"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rg1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/cartype">
+
+        <RadioButton
+            android:id="@+id/rbpajero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="Pajero"
+            android:textSize="15dp"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/rbalphard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/rbpajero"
+            android:text="Alphard"
+            android:textSize="15dp"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/rbinnova"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/rbalphard"
+            android:text="Innova"
+            android:textSize="15dp"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/rbbrio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/rbinnova"
+            android:text="Brio"
+            android:textSize="15dp"
+            android:textColor="@color/black"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Outside City"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_below="@id/rg1"/>
+
+        <RadioGroup
+            android:id="@+id/rg2"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/area">
+
+            <RadioButton
+                android:id="@+id/rbinside"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:text="Inside City"
+                android:textSize="15dp"
+                android:textColor="@color/black"/>
+
+            <RadioButton
+                android:id="@+id/rboutside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="50dp"
+                android:layout_toRightOf="@id/rbpajero"
+                android:text="Outside City"
+                android:textSize="15dp"
+                android:textColor="@color/black"/>
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/dayrent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Day of Rent"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/rg2"/>
+
+    <EditText
+        android:id="@+id/etrent"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dayrent"
+        android:hint="Total Day"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/btnRent"
+        android:layout_marginTop="20dp"
+        android:text="Rent"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etrent"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>
